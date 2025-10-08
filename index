@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Mouton | Landscaping, Irrigation & DSTV</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#10b981', // Emerald 500
+                        'secondary-blue': '#1d4ed8', // Blue 700 for DSTV tech focus
+                        'background-light': '#f9fafb', // Gray 50
+                        'text-dark': '#1f2937', // Gray 800
+                        'hero-dark-green': '#065f46', // Deep Emerald 800 for Hero background
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 640px) {
+            .section-padding {
+                padding: 6rem 4rem;
+            }
+        }
+        /* Simple hover effect for services */
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Interactive element for visual flair without external images */
+        .service-icon-box {
+            transition: background-color 0.3s;
+        }
+        .service-card:hover .service-icon-box {
+            background-color: #f0fdf4; /* A very light green/blue on hover */
+        }
+        /* Smooth scrolling for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-text-dark">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-extrabold text-primary-green tracking-tight">Chris Mouton | Tech</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#services" class="text-text-dark hover:text-primary-green transition duration-150">Services</a>
+                <a href="#experience" class="text-text-dark hover:text-primary-green transition duration-150">Experience</a>
+                <a href="#contact" class="px-4 py-2 bg-primary-green text-white rounded-full hover:bg-green-600 transition duration-150 shadow-md">Get a Quote</a>
+            </div>
+            <!-- Mobile Menu Placeholder -->
+            <button class="md:hidden text-text-dark text-xl">
+                <!-- Inline SVG for Menu Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Now a solid dark green background -->
+    <section id="hero" class="bg-hero-dark-green min-h-[80vh] flex items-center text-white">
+        
+        <!-- Content - Uses section-padding for responsive spacing -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-padding w-full">
+            <div class="space-y-6 max-w-4xl">
+                <span class="inline-block px-4 py-1 text-sm font-semibold rounded-full bg-primary-green text-white shadow-lg">20+ Years of Expertise</span>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight">
+                    <span class="text-primary-green">Mastering Your Outdoors</span> & Home Entertainment
+                </h1>
+                <p class="text-xl text-gray-200">
+                    From lush, water-efficient irrigation systems to crystal-clear satellite installations, we handle the *groundwork* and the *signal*—all with the precision of a single, dedicated expert.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#services" class="inline-block text-center px-8 py-3 bg-secondary-blue text-white font-semibold rounded-lg shadow-xl hover:bg-blue-800 transition duration-300 transform hover:scale-[1.02]">
+                        Explore Our Services
+                    </a>
+                    <a href="#contact" class="inline-block text-center px-8 py-3 bg-white text-secondary-blue border-2 border-secondary-blue font-semibold rounded-lg shadow-md hover:bg-secondary-blue/10 transition duration-300">
+                        Get Your Free Estimate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4 text-text-dark">Our Precision Services</h2>
+            <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">One expert, two specialties, consistent quality.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+
+                <!-- Service Card 1: Landscaping & Irrigation (Now using SVG Icon) -->
+                <div class="service-card p-6 md:p-10 bg-primary-green/5 rounded-2xl shadow-lg border border-primary-green/20">
+                    <h3 class="text-3xl font-bold text-primary-green mb-4 flex items-center justify-center space-x-2">
+                        <!-- Inline SVG for Leaf Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 18 2.2 18 2c0 2.2-2.3 5-7 6.1"/><path d="m8 15 2 2 4-4"/></svg>
+                        <span>Grounds & Irrigation</span>
+                    </h3>
+                    <p class="text-gray-600 mb-6 text-left">
+                        We transform and maintain stunning outdoor spaces. Our core focus is on **efficient irrigation systems**, ensuring your lawn and garden thrive while conserving water. Full service includes design, installation, maintenance, and seasonal garden preparation.
+                    </p>
+                    
+                    <!-- RELIABLE VISUAL: Large Icon Block with Interactive Background -->
+                    <div class="service-icon-box flex justify-center items-center h-48 bg-white rounded-xl shadow-inner border border-primary-green/30">
+                        <!-- Water/Sprinkler Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplet text-primary-green/80">
+                            <path d="M12 2.69l5.66 5.66c3.2 3.2 3.2 8.3 0 11.5L12 21.31l-5.66-5.66c-3.2-3.2-3.2-8.3 0-11.5L12 2.69z" />
+                        </svg>
+                    </div>
+                    <!-- End RELIABLE VISUAL -->
+                </div>
+
+                <!-- Service Card 2: DSTV Satellite Installation (Now using SVG Icon) -->
+                <div class="service-card p-6 md:p-10 bg-secondary-blue/5 rounded-2xl shadow-lg border border-secondary-blue/20">
+                    <h3 class="text-3xl font-bold text-secondary-blue mb-4 flex items-center justify-center space-x-2">
+                        <!-- Inline SVG for Satellite Dish Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-satellite-dish"><path d="M11 11.5a2.5 2.5 0 0 1 2.5 2.5V20"/><path d="M12 20V11"/><path d="M13.5 14a2.5 2.5 0 0 0-2.5-2.5"/><path d="M11 11.5A2.5 2.5 0 0 1 13.5 14"/><path d="M13.5 14h-2.5"/><path d="M11 11.5v-2.5"/><path d="M22 12c0 1.2-1.5 2-2.5 2s-2.5-.8-2.5-2 1.5-2 2.5-2 2.5.8 2.5 2Z"/><path d="M17.5 12h-2.5"/><path d="M12 2v2.5"/><path d="M12 20v2.5"/><path d="M2 12h2.5"/><path d="M20 12h2.5"/><path d="M6 6v2.5"/><path d="M18 18v2.5"/><path d="M18 6v2.5"/><path d="M6 18v2.5"/></svg>
+                        <span>DSTV & Satellite Installation</span>
+                    </h3>
+                    <p class="text-gray-600 mb-6 text-left">
+                        Need crystal-clear reception? We provide fast, reliable, and professional DSTV satellite dish setup and alignment. We handle single-view, Explora, and multi-room installations, ensuring flawless home entertainment delivery, guaranteed.
+                    </p>
+                    
+                    <!-- RELIABLE VISUAL: Large Icon Block with Interactive Background -->
+                    <div class="service-icon-box flex justify-center items-center h-48 bg-white rounded-xl shadow-inner border border-secondary-blue/30">
+                        <!-- Satellite Dish Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-satellite-dish text-secondary-blue/80">
+                            <path d="M11 11.5a2.5 2.5 0 0 1 2.5 2.5V20"/>
+                            <path d="M12 20V11"/>
+                            <path d="M13.5 14a2.5 2.5 0 0 0-2.5-2.5"/>
+                            <path d="M11 11.5A2.5 2.5 0 0 1 13.5 14"/>
+                            <path d="M13.5 14h-2.5"/>
+                            <path d="M11 11.5v-2.5"/>
+                            <path d="M22 12c0 1.2-1.5 2-2.5 2s-2.5-.8-2.5-2 1.5-2 2.5-2 2.5.8 2.5 2Z"/>
+                            <path d="M17.5 12h-2.5"/>
+                            <path d="M12 2v2.5"/>
+                            <path d="M12 20v2.5"/>
+                            <path d="M2 12h2.5"/>
+                            <path d="M20 12h2.5"/>
+                            <path d="M6 6v2.5"/>
+                            <path d="M18 18v2.5"/>
+                            <path d="M18 6v2.5"/>
+                            <path d="M6 18v2.5"/>
+                        </svg>
+                    </div>
+                    <!-- End RELIABLE VISUAL -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (The owner's story) -->
+    <section id="experience" class="section-padding bg-background-light">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white p-8 rounded-2xl shadow-2xl space-y-4">
+                <h2 class="text-4xl font-bold text-text-dark">Driven by Decades of Dedication</h2>
+                <p class="text-xl text-primary-green font-semibold">Over 20 Years as Your Trusted Specialist.</p>
+                <p class="text-gray-600">
+                    Unlike large companies, our business is built on a single commitment: **uncompromised quality and personal accountability.** For over two decades, I, **Chris Mouton**, have personally handled every project—from the design of an automated sprinkler system to the final alignment of a DSTV dish.
+                </p>
+                <p class="text-gray-600">
+                    When you hire **Chris Mouton Landscaping & Home Tech**, you get the experience of a seasoned professional who guarantees his work and understands the value of reliable service.
+                </p>
+            </div>
+            <!-- Owner Image Placeholder - Kept simple placeholder text -->
+            <div class="bg-gray-300 rounded-xl overflow-hidden shadow-xl aspect-square flex items-center justify-center text-center text-text-dark/70 text-2xl font-bold">
+                 Chris Mouton - Owner Photo
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Call to Action Section -->
+    <section id="contact" class="section-padding bg-primary-green">
+        <div class="max-w-7xl mx-auto text-center text-white">
+            <h2 class="text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 opacity-90">Get in touch with Chris, the owner, directly for a personalized consultation.</p>
+            
+            <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-2xl max-w-lg mx-auto text-text-dark">
+                <p class="text-lg font-semibold mb-4">Your Specialist Contact:</p>
+                <h3 class="text-4xl font-extrabold text-secondary-blue mb-4">Chris Mouton</h3>
+                
+                <!-- Phone Number -->
+                <p class="text-xl font-medium mb-3 flex items-center justify-center space-x-3">
+                    <!-- Inline SVG for Phone Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone text-primary-green"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>CALL OR WHATSAPP:</span>
+                </p>
+                <a href="tel:0832502370" class="inline-block px-10 py-4 mb-4 bg-primary-green text-white text-3xl font-bold rounded-xl shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-[1.05]">
+                    083 250 2370
+                </a>
+
+                <!-- Email Address (Updated) -->
+                <p class="text-xl font-medium mb-3 flex items-center justify-center space-x-3">
+                    <!-- Inline SVG for Mail Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail text-secondary-blue"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>EMAIL:</span>
+                </p>
+                <a href="mailto:chrismouton44@gmail.com" class="inline-block text-xl text-secondary-blue font-bold hover:underline transition duration-300">
+                    chrismouton44@gmail.com
+                </a>
+
+                <p class="text-sm text-gray-400 mt-4">Available for consultation Monday - Saturday</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Chris Mouton | Landscaping & Home Tech. All Rights Reserved.</p>
+            <div class="mt-2 text-sm">
+                <a href="#services" class="hover:text-primary-green transition">Landscaping</a> | 
+                <a href="#services" class="hover:text-primary-green transition">DSTV Installation</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script>
+    // Simple script to handle smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            // Only prevent default if the target is an ID on the same page
+            if (this.getAttribute('href').length > 1) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
